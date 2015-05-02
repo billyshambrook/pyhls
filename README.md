@@ -6,12 +6,19 @@ Apple provides a number of tools to work with HLS however these are only
 usable on OS X. This library aims to include the functionality of these tools,
 plus more, and offer this across multiple platforms.
 
+- [Support](#support)
+- [API](#api)
+    - [Create](#create)
+    - [Parse](#parse)
+    - [Validate](#validate)
+    - [Edit](#edit)
+- [Roadmap](#roadmap)
+
 ## Support
 
 To ensure full support of a version during initial development of this library, version support
 will be iterated from the first to the latest. **We do** plan on supporting all versions before
 the first release.
-
 
 `pyhls` currently supports Version 1 of the HTTP Live Streaming specification
 as defined in the [Pantos specification][pantos]
