@@ -6,7 +6,6 @@ Apple provides a number of tools to work with HLS however these are only
 usable on OS X. This library aims to include the functionality of these tools,
 plus more, and offer this across multiple platforms.
 
-
 ## Support
 
 To ensure full support of a version during initial development of this library, version support
@@ -43,7 +42,7 @@ and all it's dependencies to a folder.
 
 To parse a manifest, simply do:
 
-    manifest.pyhls.parse('master.m3u8')
+    manifest.parse('master.m3u8')
 
 
 ### Validate
@@ -67,6 +66,16 @@ When you parse a manifest, you can then edit it just like you would when
 creating.
 
 
+## Roadmap
+
+Overview on how things currently stand:
+
+* Build out the structure of the package.
+* Add full create, parse, validate and edit support for version 1.
+* Iterate on support for all other versions.
+* Add validation for video/audio/subtitle media files.
+* Add support for creating media files.
+* Add support for encryption of media files.
 
 
 [pantos]: https://tools.ietf.org/html/draft-pantos-http-live-streaming "Pantos"
