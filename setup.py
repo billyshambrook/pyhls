@@ -6,25 +6,29 @@ import sys
 import pyhls
 
 
-class Tox(TestCommand):
+class PyTest(TestCommand):
 
     """Extend test command to use py.test."""
 
+    user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
+
+    def initialize_options(self):
+        """Override options."""
+        self.pytest_args = []
+
     def finalize_options(self):
         """Override options."""
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
+        pass
 
-    def run_tests(self):
+    def run(self):
         """
         Override what is ran.
 
         Import here, cause outside the eggs aren't loaded
         """
-        import tox
-        errcode = tox.cmdline(self.test_args)
-        sys.exit(errcode)
+        import pytest
+        errno = pytest.main(self.pytest_args)
+        sys.exit(errno)
 
 
 setup(
@@ -33,9 +37,9 @@ setup(
     url='http://github.com/billyshambrook/pyhls/',
     license='GNU V3',
     author='Billy Shambrook',
-    tests_require=['tox'],
+    tests_require=['pytest'],
     install_requires=[],
-    cmdclass={'test': Tox},
+    cmdclass={'test': PyTest},
     author_email='billy.shambrook@gmail.com',
     description='A HTTP Live Streaming (HLS) python library.',
     packages=['pyhls'],
