@@ -1,4 +1,8 @@
 """Representations of HTTP Live Streaming playlists."""
+from collections import namedtuple
+
+
+Type = namedtuple('Type', 'master media')('master', 'media')
 
 
 class Master(object):
@@ -37,6 +41,10 @@ class Master(object):
 
     def add_media_playlist(self, media_playlist_filename):
         """
+        Add a media playlist to the master playlist.
+
+        Args:
+            media_playlist_filename (str): Generated media playlist filename.
         """
         pass
 
