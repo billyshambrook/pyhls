@@ -1,5 +1,11 @@
 # pyhls
 
+[![Build Status](https://travis-ci.org/billyshambrook/pyhls.svg)](https://travis-ci.org/billyshambrook/pyhls)
+[![Build status](https://ci.appveyor.com/api/projects/status/n3h3cge0j7ap0yd2?svg=true)](https://ci.appveyor.com/project/billyshambrook/pyhls)
+[![Code Health](https://landscape.io/github/billyshambrook/pyhls/project-setup/landscape.svg?style=flat)](https://landscape.io/github/billyshambrook/pyhls/project-setup)
+[![Coverage Status](https://coveralls.io/repos/billyshambrook/pyhls/badge.svg)](https://coveralls.io/r/billyshambrook/pyhls)
+[![Documentation Status](https://readthedocs.org/projects/pyhls/badge/?version=latest)](https://readthedocs.org/projects/pyhls/?badge=latest)
+
 A HTTP Live Streaming (HLS) python library
 
 Apple provides a number of tools to work with HLS however these are only
